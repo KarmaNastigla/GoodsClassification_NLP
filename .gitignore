@@ -1,0 +1,8 @@
+__pycache__/
+.idea/
+*.pyc
+.env
+venv/
+*.pth
+*.safetensors
+.DS_Store
