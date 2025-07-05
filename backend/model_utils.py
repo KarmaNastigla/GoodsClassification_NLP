@@ -10,10 +10,10 @@ def load_model():
 
     try:
         # Явно указываем использовать safetensors
-        model = BertForSequenceClassification.from_pretrained(
-            model_path,
-            use_safetensors=True,
-            local_files_only=True
+        model = BertForSequenceClassification.from_pretrained(  # ищут сами нужные файлы по стандартным именам.
+            model_path,                # Папка с моделью
+            use_safetensors=True,      # Использовать .safetensors вместо .bin
+            local_files_only=True      # Не пытаться скачивать из интернета
         )
         tokenizer = BertTokenizer.from_pretrained(model_path)
 
